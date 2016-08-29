@@ -1,139 +1,135 @@
 public class Homework21 {
 
     static int sum(int array []) {
-        int sum1 = 0;
+        int arraySum = 0;
         for (int massive : array) {
-            sum1 += massive;
+            arraySum += massive;
         }
-        return sum1;
+        return arraySum;
     }
 
     static double sum(double array []) {
-        double sum1 = 0;
+        double arraySum = 0;
         for (double massive : array) {
-            sum1 += massive;
+            arraySum += massive;
         }
-        return sum1;
+        return arraySum;
     }
 
     static int min (int array []){
-        int min1 = array [0];
+        int arrayMin = array [0];
         for (int i = 1; i<array.length; i++){
-            if (min1 > array [i]){
-                min1 = array [i];
+            if (arrayMin > array [i]){
+                arrayMin = array [i];
             }
         }
-        return min1;
+        return arrayMin;
     }
 
     static double min (double array []){
-        double min1 = array [0];
+        double arrayMin = array [0];
         for (int i = 1; i<array.length; i++){
-            if (min1 > array [i]){
-                min1 = array [i];
+            if (arrayMin > array [i]){
+                arrayMin = array [i];
             }
         }
-        return min1;
+        return arrayMin;
     }
 
     static int max (int array []){
-        int max1 = array [0];
+        int arrayMax = array [0];
         for (int i = 1; i<array.length; i++){
-            if (max1 < array [i]){
-                max1 = array [i];
+            if (arrayMax < array [i]){
+                arrayMax = array [i];
             }
         }
-        return max1;
+        return arrayMax;
     }
 
     static double max (double array []){
-        double max1 = array [0];
+        double arrayMax = array [0];
         for (int i = 1; i<array.length; i++){
-            if (max1 < array [i]){
-                max1 = array [i];
+            if (arrayMax < array [i]){
+                arrayMax = array [i];
             }
         }
-        return max1;
+        return arrayMax;
     }
 
     static int maxPositive (int array []){
-        int max1 = array [0];
+        int arrayMaxPos = array [0];
         for (int i = 1; i<array.length; i++){
-            if (max1 < array [i] && array[i] > 0){
-                max1 = array [i];
+            if (array[i] > 0){
+                if (arrayMaxPos < array [i]) {
+                    arrayMaxPos = array[i];
+                }
             }
         }
-        return max1;
+        return arrayMaxPos;
     }
 
     static double maxPositive (double array []){
-        double max1 = array [0];
+        double arrayMaxPos = array [0];
         for (int i = 1; i<array.length; i++){
-            if (max1 < array [i] && array[i] > 0){
-                max1 = array [i];
+            if (array[i] > 0){
+                if (arrayMaxPos < array [i]) {
+                    arrayMaxPos = array[i];
+                }
             }
         }
-        return max1;
+        return arrayMaxPos;
     }
 
     static long multiplication(int array []) {
-        long mult1 = 1;
+        long arrayMult = 1;
         for (int massive : array) {
-            mult1 *= massive;
+            arrayMult *= massive;
         }
-        return mult1;
+        return arrayMult;
     }
 
     static double multiplication(double array []) {
-        double mult1 = 1;
+        double arrayMult = 1;
         for (double massive : array) {
-            mult1 *= massive;
+            arrayMult *= massive;
         }
-        return mult1;
+        return arrayMult;
     }
 
     static int modulus (int array []){
-        int mod1;
+        int mod;
         int i = array.length-1;
-        mod1 = array[0] % array[i];
+        mod = array[0] % array[i];
 
-        return mod1;
+        return mod;
     }
 
     static double modulus (double array []){
-        double mod1;
+        double mod;
         int i = array.length-1;
-        mod1 = array[0]%array[i];
+        mod = array[0]%array[i];
 
-        return mod1;
+        return mod;
     }
 
     static int secondLargest (int array []){
-        int max1 = array [0];
+        int arrayMax = max(array);
         int secondMax = min(array);
         for (int i = 1; i<array.length; i++){
-            if (max1 < array [i]){
-                secondMax = max1;
-                max1 = array [i];
-            }
-            else
-            if (secondMax < array[i] && array[i]!=max1)
+            if (secondMax < array[i] && array[i] != arrayMax) {
                 secondMax = array[i];
+            }
         }
         return secondMax;
     }
 
     static double secondLargest (double array []){
-        double max1 = array [0];
+        double arrayMax = max(array);
         double secondMax = min(array);
         for (int i = 1; i<array.length; i++){
-            if (max1 < array [i]){
-                secondMax = max1;
-                max1 = array [i];
-            }
-            else
-            if (secondMax < array[i] && array[i]!=max1)
+            if (secondMax < array[i] && array[i] != arrayMax) {
                 secondMax = array[i];
+            }
         }
         return secondMax;
     }

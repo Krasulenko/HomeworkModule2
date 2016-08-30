@@ -115,7 +115,7 @@ public class Homework21 {
     static int secondLargest (int array []){
         int arrayMax = max(array);
         int secondMax = min(array);
-        for (int i = 1; i<array.length; i++){
+        for (int i = 0; i<array.length; i++){
             if (secondMax < array[i] && array[i] != arrayMax) {
                 secondMax = array[i];
             }
@@ -126,7 +126,7 @@ public class Homework21 {
     static double secondLargest (double array []){
         double arrayMax = max(array);
         double secondMax = min(array);
-        for (int i = 1; i<array.length; i++){
+        for (int i = 0; i<array.length; i++){
             if (secondMax < array[i] && array[i] != arrayMax) {
                 secondMax = array[i];
             }

@@ -1,18 +1,19 @@
 
 public class Homework22 {
 
-    static double balance = 100;
-    static double withdrawal = 50;
     static double commissionpercents = 0.05;
-    static double commission = withdrawal * commissionpercents;
 
     static double withdrawBalance(double balance, double withdrawal) {
 
-        return balance - withdrawal - commission;
+        return balance - withdrawal - withdrawal*commissionpercents;
     }
 
     public static void main(String[] args) {
 
+        double balance = 100;
+        double withdrawal = 50;
+
+        double commission = withdrawal * commissionpercents;
         double balanceAfter = withdrawBalance (balance, withdrawal);
 
         if (balanceAfter >= 0){

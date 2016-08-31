@@ -12,7 +12,9 @@ public class Homework24 {
                 break;
             }
         }
-        return balance + fund;
+        double balanceAfter = balance + fund;
+        System.out.println(ownerName + " " + balanceAfter);
+        return balanceAfter;
     }
 
     public static void main(String[] args) {
@@ -20,8 +22,7 @@ public class Homework24 {
         String ownerName = "Lane";
         double fund = 800;
 
-        double balanceAfter = fundBalance(ownerName,fund);
-        System.out.println(ownerName + " " + balanceAfter);
+        fundBalance(ownerName, fund);
     }
 
 }

@@ -13,7 +13,14 @@ public class Homework23 {
                 break;
             }
         }
-        return balance - withdrawal - withdrawal * commissionpercents;
+        double balanceAfter = balance - withdrawal - withdrawal * commissionpercents;
+        if (balanceAfter >= 0){
+            System.out.println(ownerName + " " + withdrawal + " " + balanceAfter);
+        }
+        else {
+            System.out.println(ownerName + " NO");
+        }
+        return balanceAfter;
     }
 
     public static void main(String[] args) {
@@ -21,13 +28,7 @@ public class Homework23 {
         String ownerName = "Jack";
         double withdrawal = 1750;
 
-        double balanceAfter = withdrawBalance(ownerName,withdrawal);
-        if (balanceAfter >= 0){
-            System.out.println(ownerName + " " + withdrawal + " " + balanceAfter);
-        }
-        else {
-            System.out.println(ownerName + " NO");
-        }
+        withdrawBalance(ownerName,withdrawal);
     }
 
 }
